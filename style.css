@@ -1,0 +1,275 @@
+/* Réinitialisation de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styles généraux du corps */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden; /* Pour gérer les floats */
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1, h2, h3 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.2em;
+}
+
+/* Boutons */
+.btn {
+    display: inline-block;
+    background: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #0056b3;
+    text-decoration: none;
+}
+
+/* --- SECTION 1: En-tête / Bannière Héro --- */
+.hero {
+    background: url('https://via.placeholder.com/1500x500?text=Image+de+fond+renovation') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+    min-height: 400px;
+    display: flex; /* Pour centrer le contenu verticalement */
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.hero::before { /* Pour un léger voile sombre sur l'image */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Plus foncé si le texte est difficile à lire */
+}
+
+.hero .container {
+    position: relative; /* Pour que le contenu soit au-dessus du voile */
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+/* --- Sections générales --- */
+section {
+    padding: 60px 0;
+}
+
+section:nth-child(even) { /* Style alterné pour les sections pour une meilleure lisibilité */
+    background-color: #e2e6ea;
+}
+
+/* --- SECTION 2: Qui sommes-nous --- */
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.about-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+/* --- SECTION 3: Nos Services --- */
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+.service-item {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+}
+
+.service-item h3 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+/* --- SECTION 4: Nos Réalisations / Galerie Photos --- */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.gallery-item {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Assure que l'image couvre l'espace sans se déformer */
+    display: block;
+    margin-bottom: 10px;
+}
+
+.gallery-item p {
+    padding: 0 15px;
+    font-size: 0.95em;
+    color: #555;
+}
+
+/* --- SECTION 5: Pourquoi nous choisir ? --- */
+.why-us ul {
+    list-style: none; /* Enlève les puces par défaut */
+    padding-left: 0;
+}
+
+.why-us ul li {
+    background: #fff;
+    margin-bottom: 15px;
+    padding: 20px;
+    border-left: 5px solid #007bff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+    font-size: 1.1em;
+}
+
+/* --- SECTION 6: Contact --- */
+.contact {
+    text-align: center;
+}
+
+.contact p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.contact .btn {
+    margin-top: 20px;
+}
+
+/* --- Pied de page --- */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+    font-size: 0.9em;
+}
+
+footer p {
+    margin-bottom: 5px;
+}
+
+footer a {
+    color: #fff;
+    margin: 0 10px;
+}
+
+/* --- Styles Responsives (pour mobiles) --- */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .hero h1 {
+        font-size: 2.5em;
+    }
+
+    .hero p {
+        font-size: 1.2em;
+    }
+
+    .about-content {
+        flex-direction: column; /* Revenir à une colonne sur mobile */
+    }
+
+    .about-img {
+        margin-bottom: 20px;
+    }
+
+    .service-grid, .gallery {
+        grid-template-columns: 1fr; /* Une colonne sur mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    .btn {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+}
