@@ -68,7 +68,6 @@ h2 {
 .hero {
     
     background: url('Fondecran.jpeg') no-repeat center center/cover; /* Assurez-vous que le chemin est correct */
-
     color: #fff;
     text-align: center;
     padding: 100px 0;
@@ -78,6 +77,7 @@ h2 {
     justify-content: center;
     position: relative; 
 }
+
 .hero::before { /* Pour un léger voile sombre sur l'image */
     content: '';
     position: absolute;
