@@ -27,7 +27,7 @@ body {
 }
 
 a {
-    color: #007bff;
+    color: #1A2A3A;
     text-decoration: none;
 }
 
@@ -54,7 +54,7 @@ h2 {
 /* Boutons */
 .btn {
     display: inline-block;
-    background: #007bff;
+    background:;
     color: #fff;
     padding: 10px 20px;
     border-radius: 5px;
@@ -63,7 +63,7 @@ h2 {
 }
 
 .btn:hover {
-    background: #0056b3;
+    background: ;
     text-decoration: none;
 }
 
@@ -159,7 +159,7 @@ section:nth-child(even) { /* Style alterné pour les sections pour une meilleure
 }
 
 .service-item h3 {
-    color: #007bff;
+    color: #1A2A3A;
     margin-bottom: 10px;
 }
 
@@ -203,7 +203,7 @@ section:nth-child(even) { /* Style alterné pour les sections pour une meilleure
     background: #fff;
     margin-bottom: 15px;
     padding: 20px;
-    border-left: 5px solid #007bff;
+    border-left: 5px solid #1A2A3A;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.08);
     font-size: 1.1em;
