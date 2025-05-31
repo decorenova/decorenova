@@ -37,7 +37,7 @@ a:hover {
 }
 
 h1, h2, {
-    color: #333;
+    color: #1f417e;
     font-family: 'TeXGyreTermes', serif;
     font-weight: bold; /* ou 700 pour la graisse */
 }
@@ -54,7 +54,7 @@ h2 {
 }
 
 .UVA {
-    color: #fff;
+    color: ##1f417e;
     font-size: 4vh;
     font-family: 'TeXGyreTermes', serif;
     font-weight: bold; /* ou 700 pour la graisse */
