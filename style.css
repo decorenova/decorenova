@@ -14,6 +14,7 @@ html {
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
+    font-family: 'TeXGyreTermes', serif;
     color: #333;
     background-color: #f4f4f4;
 }
@@ -37,7 +38,13 @@ a:hover {
 
 h1, h2, {
     color: #333;
-
+    font-family: 'TeXGyreTermes', serif;
+    font-weight: bold; /* ou 700 pour la graisse */
+}
+  
+ .special-text {
+    font-family: 'TeXGyreTermes', serif;
+    font-style: italic; /* pour l'italique */
 }
 
 h2 {
@@ -49,6 +56,8 @@ h2 {
 .UVA {
     color: #fff;
     font-size: 4vh;
+    font-family: 'TeXGyreTermes', serif;
+    font-weight: bold; /* ou 700 pour la graisse */
 }
 
 /* Boutons */
