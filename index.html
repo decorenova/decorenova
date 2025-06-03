@@ -10,10 +10,16 @@
     <link rel="icon" href="UrsulVasilibis2.png" type="image/png">
     <title>My Page Title</title>
 
+    <!-- ✅ À ajouter dans le <head> de ton document si ce n'est pas encore fait -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
+
     
 </head>
 <body>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+
+    
     <header class="hero">
 
         <div class="container">
@@ -61,29 +67,43 @@
             </div>
         </section>
 
-        <section id="portfolio" class="portfolio">
-            <div class="container">
-                <h2>Nos Réalisations</h2>
-                <div class="gallery">
-                    <div class="gallery-item">
-                        <img src="salon1.jpg" alt="Description du projet 1">
-                        <p>...</p>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="salon2.jpg" alt="Description du projet 2">
-                        <p>...</p>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="saledebain2.jpg" alt="Description du projet 3">
-                        <p>...</p>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="porterouge1.jpg" alt="Description du projet 4">
-                        <p>...</p>
-                    </div>
-                </div>
+       <section id="portfolio" class="portfolio">
+    <div class="container">
+        <h2>Nos Réalisations</h2>
+        <div class="gallery">
+
+            <div class="gallery-item">
+                <a href="salon1.jpg" data-lightbox="portfolio" data-title="Description du projet 1">
+                    <img src="salon1.jpg" alt="Description du projet 1">
+                </a>
+                <p>...</p>
             </div>
-        </section>
+
+            <div class="gallery-item">
+                <a href="salon2.jpg" data-lightbox="portfolio" data-title="Description du projet 2">
+                    <img src="salon2.jpg" alt="Description du projet 2">
+                </a>
+                <p>...</p>
+            </div>
+
+            <div class="gallery-item">
+                <a href="saledebain2.jpg" data-lightbox="portfolio" data-title="Description du projet 3">
+                    <img src="saledebain2.jpg" alt="Description du projet 3">
+                </a>
+                <p>...</p>
+            </div>
+
+            <div class="gallery-item">
+                <a href="porterouge1.jpg" data-lightbox="portfolio" data-title="Description du projet 4">
+                    <img src="porterouge1.jpg" alt="Description du projet 4">
+                </a>
+                <p>...</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
 
         <section id="about" class="about">
             <div class="container">
