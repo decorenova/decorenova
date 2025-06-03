@@ -18,6 +18,25 @@
 <body>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+<script>
+  // Attendre que Lightbox soit prêt
+  document.addEventListener("DOMContentLoaded", function () {
+    lightbox.option({
+      'disableScrolling': true,         // (optionnel) pour éviter que le fond bouge
+      'alwaysShowNavOnTouchDevices': false,
+      'wrapAround': false
+    });
+
+    // Quand une image est affichée en plein écran
+    document.addEventListener("click", function (e) {
+      const lightboxImage = document.querySelector('.lightbox .lb-image');
+      if (lightboxImage && e.target === lightboxImage) {
+        const closeBtn = document.querySelector('.lightbox .lb-close');
+        if (closeBtn) closeBtn.click();
+      }
+    });
+  });
+</script>
 
     
     <header class="hero">
