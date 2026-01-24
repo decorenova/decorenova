@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demande de Devis</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section class="contact-section">
+        <div class="container">
+            <h1>Demande de Devis</h1>
+            <p class="subtitle">Obtenez une estimation gratuite de vos travaux</p>
+
+            <form action="https://formspree.io/f/mkojynly" method="POST" class="contact-form">
+                
+                <!-- Informations Personnelles -->
+                <div class="form-section">
+                    <h2>Vos Coordonnées</h2>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nom">Nom *</label>
+                            <input type="text" id="nom" name="nom" required placeholder="Votre nom">
+                        </div>
+                        <div class="form-group">
+                            <label for="prenom">Prénom *</label>
+                            <input type="text" id="prenom" name="prenom" required placeholder="Votre prénom">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required placeholder="votre@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="telephone">Téléphone *</label>
+                            <input type="tel" id="telephone" name="telephone" required placeholder="06 XX XX XX XX">
+                        </div>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="adresse">Adresse des travaux *</label>
+                        <input type="text" id="adresse" name="adresse" required placeholder="Adresse complète">
+                    </div>
+                </div>
+
+                <!-- Type de Projet -->
+                <div class="form-section">
+                    <h2>Votre Projet</h2>
+                    
+                    <div class="form-group full-width">
+                        <label for="type-travaux">Type de travaux *</label>
+                        <select id="type-travaux" name="type-travaux" required onchange="updateEstimation()">
+                            <option value="">-- Sélectionnez --</option>
+                            <option value="Peinture & Revêtements">Peinture & Revêtements</option>
+                            <option value="Plomberie">Plomberie</option>
+                            <option value="Électricité">Électricité</option>
+                            <option value="Aménagement Intérieur">Aménagement Intérieur</option>
+                            <option value="Gros Œuvre">Gros Œuvre</option>
+                            <option value="Rénovation Complète">Rénovation Complète</option>
+                            <option value="Autre">Autre</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="surface">Surface approximative (m²) *</label>
+                        <input type="number" id="surface" name="surface" required placeholder="Ex: 50" min="1" onchange="updateEstimation()">
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="delai">Délai souhaité</label>
+                        <select id="delai" name="delai">
+                            <option value="">-- Optionnel --</option>
+                            <option value="Urgent (moins d'1 mois)">Urgent (moins d'1 mois)</option>
+                            <option value="1 à 3 mois">1 à 3 mois</option>
+                            <option value="3 à 6 mois">3 à 6 mois</option>
+                            <option value="Plus de 6 mois">Plus de 6 mois</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Estimation Automatique -->
+                <div class="estimation-box" id="estimation-box" style="display: none;">
+                    <h3>💰 Estimation Indicative</h3>
+                    <p class="estimation-text">Fourchette de prix estimée :</p>
+                    <p class="estimation-price" id="estimation-price">0€ - 0€</p>
+                    <p class="estimation-note">⚠️ Cette estimation est indicative et basée sur des moyennes. Un devis précis sera établi après étude de votre projet.</p>
+                </div>
+
+                <!-- Description du Projet -->
+                <div class="form-section">
+                    <h2>Détails de Votre Projet</h2>
+                    
+                    <div class="form-group full-width">
+                        <label for="description">Description détaillée *</label>
+                        <textarea 
+                            id="description" 
+                            name="description" 
+                            rows="6" 
+                            required 
+                            placeholder="Décrivez votre projet : travaux souhaités, état actuel, particularités, matériaux préférés..."></textarea>
+                    </div>
+                </div>
+
+                <!-- Bouton d'envoi -->
+                <button type="submit" class="btn-submit">
+                    Envoyer ma demande de devis
+                </button>
+
+                <p class="form-footer">
+                    En envoyant ce formulaire, vous acceptez d'être contacté par notre équipe pour discuter de votre projet.
+                </p>
+            </form>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
