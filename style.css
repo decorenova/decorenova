@@ -1,16 +1,21 @@
-/* scroll smoth */
-html {
-  scroll-behavior: smooth;
-}
+/* ========================================
+   URSUL VASILI RENOVATION - STYLESHEET
+   ======================================== */
 
-/* Réinitialisation de base */
+/* ========================================
+   1. RESET & BASE STYLES
+   ======================================== */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Styles généraux du corps */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
@@ -18,32 +23,13 @@ body {
     background-color: #f4f4f4;
 }
 
+/* ========================================
+   2. TYPOGRAPHY
+   ======================================== */
 
-.container {
-    width: 80%;
-    max-width: 1200px;
-    margin: auto;
-    overflow: hidden; /* Pour gérer les floats */
-}
-
-a {
-    color: #;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-h1, h2, {
+h1, h2, h3 {
     color: #1f417e;
-    font-family: 'TeXGyreTermes', serif;
-    font-weight: bold; /* ou 700 pour la graisse */
-}
-  
- .special-text {
-    font-family: 'TeXGyreTermes', serif;
-    font-style: italic; /* pour l'italique */
+    font-weight: bold;
 }
 
 h2 {
@@ -52,17 +38,32 @@ h2 {
     font-size: 2.2em;
 }
 
-.UVA {
-    color: ##1f417e;
-    font-size: 4vh;
-    font-family: 'TeXGyreTermes', serif;
-    font-weight: bold; /* ou 700 pour la graisse */
+/* ========================================
+   3. LAYOUT
+   ======================================== */
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
 }
 
-/* Boutons */
+section {
+    padding: 60px 0;
+}
+
+section:nth-child(even) {
+    background-color: #e2e6ea;
+}
+
+/* ========================================
+   4. BUTTONS
+   ======================================== */
+
 .btn {
     display: inline-block;
-    background:#1f417e;
+    background: #1f417e;
     color: #fff;
     padding: 10px 20px;
     border-radius: 5px;
@@ -71,38 +72,63 @@ h2 {
 }
 
 .btn:hover {
-    background: ;
+    background: #163059;
     text-decoration: none;
 }
 
-/* --- SECTION 1: En-tête / Bannière Héro --- */
+/* ========================================
+   5. LINKS
+   ======================================== */
 
-/* --- SECTION 1: En-tête / Bannière Héro --- */
+a {
+    color: #1f417e;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.pdf-link {
+    color: blue;
+    text-decoration: none;
+    font-weight: normal;
+    transition: color 0.3s;
+}
+
+.pdf-link:hover {
+    color: #6c757d;
+    text-decoration: none;
+}
+
+/* ========================================
+   6. HERO SECTION
+   ======================================== */
+
 .hero {
-    
-    background: url('Fondecran.jpeg') no-repeat center center/cover; /* Assurez-vous que le chemin est correct */
+    background: url('Fondecran.jpeg') no-repeat center center/cover;
     color: #fff;
     text-align: center;
     padding: 100px 0;
     min-height: 400px;
-    display: flex; /* Pour centrer le contenu verticalement */
+    display: flex;
     align-items: center;
     justify-content: center;
-    position: relative; 
+    position: relative;
 }
 
-.hero::before { /* Pour un léger voile sombre sur l'image */
+.hero::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4); /* Plus foncé si le texte est difficile à lire */
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 .hero .container {
-    position: relative; /* Pour que le contenu soit au-dessus du voile */
+    position: relative;
     z-index: 1;
 }
 
@@ -111,99 +137,275 @@ h2 {
     color: #fff;
 }
 
+.hero-subtitle {
+    color: #fff;
+    font-size: 4vh;
+    font-weight: bold;
+}
+
 .hero p {
     font-size: 1.5em;
     margin-bottom: 30px;
     color: #fff;
 }
 
-/* --- Sections générales --- */
-section {
-    padding: 60px 0;
-}
-
-section:nth-child(even) { /* Style alterné pour les sections pour une meilleure lisibilité */
-    background-color: #e2e6ea;
-}
-
-/* --- SECTION 2: Qui sommes-nous --- */
-.about-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.about-img {
+.hero-logo {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
     margin-bottom: 20px;
 }
 
-.about p {
-    font-size: 1.1em;
-    line-height: 1.8;
+/* ========================================
+   7. SERVICES SECTION
+   ======================================== */
+
+.services-layout {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 40px;
+    align-items: start;
+    margin-bottom: 40px;
 }
 
-/* --- SECTION 3: Nos Services --- */
-.service-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    text-align: center;
+/* Image à gauche - PLUS GRANDE */
+.services-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.services-image img {
+    width: 100%;
+    height: 100%;
+    min-height: 600px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.services-image:hover img {
+    transform: scale(1.05);
+}
+
+/* Liste des services à droite - PLUS COMPACTS */
+.services-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
 .service-item {
     background: #fff;
-    padding: 30px;
+    padding: 15px 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
+    border-left: 4px solid #1f417e;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
 }
 
 .service-item:hover {
-    transform: translateY(-5px);
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
 
 .service-item h3 {
     color: #1f417e;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+    font-size: 1.1em;
 }
 
-/* --- SECTION 4: Nos Réalisations / Galerie Photos --- */
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-}
-
-.gallery-item {
-    background: #fff;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    text-align: center;
-    padding-bottom: 15px;
-}
-
-.gallery-item img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover; /* Assure que l'image couvre l'espace sans se déformer */
-    display: block;
-    margin-bottom: 10px;
-}
-
-.gallery-item p {
-    padding: 0 15px;
-    font-size: 0.95em;
+.service-item p {
     color: #555;
+    font-size: 0.9em;
+    line-height: 1.5;
+    margin: 0;
 }
 
-/* --- SECTION 5: Pourquoi nous choisir ? --- */
+/* Bouton devis centré */
+.services-cta {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn-large {
+    padding: 15px 40px;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+/* ========================================
+   8. PORTFOLIO / SLIDER SECTION
+   ======================================== */
+
+.slider-container {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.slider-wrapper {
+    position: relative;
+    width: 100%;
+    height: 500px;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    background: #000;
+}
+
+.slide.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.slide-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 20px;
+    font-size: 1em;
+    text-align: center;
+    margin: 0;
+}
+
+/* Flèches de navigation */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(31, 65, 126, 0.8);
+    color: #fff;
+    border: none;
+    font-size: 2em;
+    padding: 15px 20px;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+}
+
+.slider-btn:hover {
+    background: rgba(31, 65, 126, 1);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.slider-btn-prev {
+    left: 20px;
+}
+
+.slider-btn-next {
+    right: 20px;
+}
+
+/* Navigation par points */
+.slider-dots {
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 12px;
+    z-index: 10;
+}
+
+.dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.dot:hover {
+    background: rgba(255, 255, 255, 0.8);
+    transform: scale(1.2);
+}
+
+.dot.active {
+    background: #1f417e;
+    border-color: #fff;
+    transform: scale(1.2);
+}
+
+/* ========================================
+   9. ABOUT SECTION
+   ======================================== */
+
+.about-content {
+    display: grid;
+    grid-template-columns: auto 2px 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+/* Logo à gauche */
+.about-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-img {
+    max-width: 250px;
+    width: 100%;
+    height: auto;
+}
+
+/* Ligne verticale séparatrice */
+.about-divider {
+    width: 2px;
+    height: 200px;
+    background: #1f417e;
+    border-radius: 2px;
+}
+
+/* Texte à droite */
+.about-text {
+    text-align: left;
+}
+
+.about-text p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.about-text p:last-child {
+    margin-bottom: 0;
+}
+
+/* ========================================
+   10. WHY US SECTION
+   ======================================== */
+
 .why-us ul {
-    list-style: none; /* Enlève les puces par défaut */
+    list-style: none;
     padding-left: 0;
 }
 
@@ -213,11 +415,14 @@ section:nth-child(even) { /* Style alterné pour les sections pour une meilleure
     padding: 20px;
     border-left: 5px solid #1f417e;
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
     font-size: 1.1em;
 }
 
-/* --- SECTION 6: Contact --- */
+/* ========================================
+   11. CONTACT SECTION
+   ======================================== */
+
 .contact {
     text-align: center;
 }
@@ -231,7 +436,19 @@ section:nth-child(even) { /* Style alterné pour les sections pour une meilleure
     margin-top: 20px;
 }
 
-/* --- Pied de page --- */
+/* Map Styles */
+#osm-map {
+    height: 200px;
+    width: 100%;
+    margin-top: 30px;
+    background-color: #333;
+    border-radius: 8px;
+}
+
+/* ========================================
+   12. FOOTER
+   ======================================== */
+
 footer {
     background: #333;
     color: #fff;
@@ -247,9 +464,18 @@ footer p {
 footer a {
     color: #fff;
     margin: 0 10px;
+    transition: color 0.3s;
 }
 
-/* --- Styles Responsives (pour mobiles) --- */
+footer a:hover {
+    color: #1f417e;
+}
+
+/* ========================================
+   13. RESPONSIVE DESIGN
+   ======================================== */
+
+/* Tablets */
 @media (max-width: 768px) {
     .container {
         width: 90%;
@@ -264,18 +490,76 @@ footer a {
     }
 
     .about-content {
-        flex-direction: column; /* Revenir à une colonne sur mobile */
+        flex-direction: column;
+    }
+
+    /* About en colonne sur tablette */
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .about-divider {
+        display: none;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+
+    /* Slider responsive */
+    .slider-wrapper {
+        height: 350px;
+    }
+
+    .slider-btn {
+        font-size: 1.5em;
+        padding: 10px 15px;
+    }
+
+    .slider-btn-prev {
+        left: 10px;
+    }
+
+    .slider-btn-next {
+        right: 10px;
+    }
+
+    .slide-caption {
+        font-size: 0.9em;
+        padding: 15px;
+    }
+
+    .slider-dots {
+        bottom: 60px;
+    }
+
+    .dot {
+        width: 12px;
+        height: 12px;
     }
 
     .about-img {
         margin-bottom: 20px;
     }
 
-    .service-grid, .gallery {
-        grid-template-columns: 1fr; /* Une colonne sur mobile */
+    /* Services en colonne sur tablette */
+    .services-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .services-image img {
+        min-height: 350px;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
     }
 }
 
+/* Mobile */
 @media (max-width: 480px) {
     .hero h1 {
         font-size: 2em;
@@ -293,5 +577,19 @@ footer a {
         padding: 8px 15px;
         font-size: 0.9em;
     }
-}
 
+    /* Slider mobile */
+    .slider-wrapper {
+        height: 300px;
+    }
+
+    .slider-btn {
+        font-size: 1.2em;
+        padding: 8px 12px;
+    }
+
+    .slide-caption {
+        font-size: 0.85em;
+        padding: 12px;
+    }
+}

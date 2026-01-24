@@ -3,212 +3,255 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17240212859"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-17240212859');
-</script>
-    <link rel="canonical" href="https://ursul-vasili.pro/" />
-
-    
-     <!-- ✅ Rajouter le mercredi 02/07/2025 -->
     <meta name="description" content="Ursul & Vasili – Experts en rénovation complète d'appartements à Paris. Peinture, électricité, plomberie, aménagement intérieur. Devis gratuit.">
-    
+    <link rel="canonical" href="https://ursul-vasili.pro/" />
     <title>URSUL VASILI artisan</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-    <link rel="icon" href="UrsulVasilibis2.png" type="image/png">
-    <title>My Page Title</title>
-
-   
-
-    <!-- ✅ À ajouter dans le <head> de ton document si ce n'est pas encore fait -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
-
     
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="UrsulVasilibis2.png" type="image/png">
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    
+    <!-- Lightbox CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17240212859"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-17240212859');
+    </script>
 </head>
 <body>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
-
-    
+    <!-- Hero Section -->
     <header class="hero">
-
         <div class="container">
-            <img src="UrsulVasilibis2.png" alt="Photo de l'équipe ou de l'artisan" class="about-img">
+            <img src="UrsulVasilibis2.png" alt="Logo Ursul Vasili Rénovation" class="hero-logo">
             <h1>Ursul Vasili Rénovation</h1>
-            <h3 class="UVA">artisan</h3>
+            <h3 class="hero-subtitle">artisan</h3>
             <p>La qualité, à bon prix.</p>
             <a href="https://calendar.app.google/m2t3TjwTszhh6Y457" class="btn">Prendre rendez-vous</a>
         </div>
     </header>
 
     <main>
-        
+        <!-- Services Section -->
         <section id="services" class="services">
             <div class="container">
                 <h2>Nos Services de Rénovation</h2>
-                <div class="service-grid">
-                   
+                <div class="services-layout">
+                    <!-- Image à gauche -->
+                    <div class="services-image">
+                        <img src="salon1.jpg" alt="Exemple de rénovation - Salon avec verrière">
+                    </div>
+                    
+                    <!-- Liste des services à droite -->
+                    <div class="services-list">
+                        <div class="service-item">
+                            <h3>Peinture & Revêtements</h3>
+                            <p>Application de peinture intérieure/extérieure, pose de carrelage, parquet, et revêtements muraux.</p>
+                        </div>
+                        <div class="service-item">
+                            <h3>Plomberie</h3>
+                            <p>Installation sanitaire, réparation de fuites, création de salles de bain et cuisines.</p>
+                        </div>
+                        <div class="service-item">
+                            <h3>Électricité</h3>
+                            <p>Mise aux normes électriques, installation de prises, interrupteurs et luminaires.</p>
+                        </div>
+                        <div class="service-item">
+                            <h3>Aménagement Intérieur</h3>
+                            <p>Optimisation d'espace, pose de cuisines équipées, agencements sur mesure.</p>
+                        </div>
+                        <div class="service-item">
+                            <h3>Petits Travaux Divers</h3>
+                            <p>Dépannages rapides, réparations mineures et travaux d'entretien courant.</p>
+                        </div>
+                        <div class="service-item">
+                            <h3>Gros Oeuvres</h3>
+                            <p>Construction de murs et cloisons, chape et béton, pose de planchers.</p>
+                        </div>
+                    </div>
+                </div>
                 
-                    <div class="service-item">
-                        <h3>Peinture & Revêtements</h3>
-                        <p>Application de peinture intérieure/extérieure, pose de carrelage, parquet, et revêtements muraux.</p>
+                <!-- Bouton devis centré en bas -->
+                <div class="services-cta">
+                    <a href="#" class="btn btn-large">Faites un devis</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="portfolio">
+            <div class="container">
+                <h2>Nos Réalisations</h2>
+                
+                <!-- Carrousel -->
+                <div class="slider-container">
+                    <!-- Slides -->
+                    <div class="slider-wrapper">
+                        <div class="slide active">
+                            <img src="salon1.jpg" alt="Pose et restauration de moulures avec verrière">
+                            <p class="slide-caption">Pose et restauration de moulures avec installation d'une verrière d'intérieur.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="salon2.jpg" alt="Restauration et traitement bois">
+                            <p class="slide-caption">Restauration et traitement bois avec isolation thermique améliorée.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="saledebain2.jpg" alt="Miroir LED et carrelage contemporain">
+                            <p class="slide-caption">Pose de miroir LED et habillage mural en carrelage contemporain.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="Douche.jpg" alt="Installation de douche complète">
+                            <p class="slide-caption">Installation complète de douche avec robinetterie encastrée.</p>
+                        </div>
                     </div>
-                    <div class="service-item">
-                        <h3>Plomberie</h3>
-                        <p>Installation sanitaire, réparation de fuites, création de salles de bain et cuisines.</p>
-                    </div>
-                    <div class="service-item">
-                        <h3>Électricité</h3>
-                        <p>Mise aux normes électriques, installation de prises, interrupteurs et luminaires.</p>
-                    </div>
-                    <div class="service-item">
-                        <h3>Aménagement Intérieur</h3>
-                        <p>Optimisation d'espace, pose de cuisines équipées, agencements sur mesure.</p>
-                    </div>
-                    <div class="service-item">
-                        <h3>Petits Travaux Divers</h3>
-                        <p>Dépannages rapides, réparations mineures et travaux d'entretien courant.</p>
-                    </div>
-                      <div class="service-item">
-                        <h3>Gros Oeuvres</h3>
-                        <p>Construction de murs et cloisons, chape et béton, pose de planchers.</p>
+                    
+                    <!-- Flèches de navigation -->
+                    <button class="slider-btn slider-btn-prev" aria-label="Image précédente">&#10094;</button>
+                    <button class="slider-btn slider-btn-next" aria-label="Image suivante">&#10095;</button>
+                    
+                    <!-- Navigation par points -->
+                    <div class="slider-dots">
+                        <span class="dot active" data-slide="0"></span>
+                        <span class="dot" data-slide="1"></span>
+                        <span class="dot" data-slide="2"></span>
+                        <span class="dot" data-slide="3"></span>
                     </div>
                 </div>
             </div>
         </section>
 
-       <section id="portfolio" class="portfolio">
-    <div class="container">
-        <h2>Nos Réalisations</h2>
-        <div class="gallery">
-
-            <div class="gallery-item">
-                <a href="salon1.jpg" data-lightbox="portfolio" data-title="Description du projet 1">
-                    <img src="salon1.jpg" alt="Description du projet 1">
-                </a>
-                <p>Pose et restauration de moulures avec installation d'une verrière d'intérieur.</p>
-            </div>
-
-            <div class="gallery-item">
-                <a href="salon2.jpg" data-lightbox="portfolio" data-title="Description du projet 2">
-                    <img src="salon2.jpg" alt="Description du projet 2">
-                </a>
-                <p>Restauration et traitement bois avec isolation thermique améliorée</p>
-            </div>
-
-            <div class="gallery-item">
-                <a href="saledebain2.jpg" data-lightbox="portfolio" data-title="Description du projet 3">
-                    <img src="saledebain2.jpg" alt="Description du projet 3">
-                </a>
-                <p>Pose de miroir LED et habillage mural en carrelage contemporain.</p>
-            </div>
-
-            <div class="gallery-item">
-                <a href="Douche.jpg" data-lightbox="portfolio" data-title="Description du projet 4">
-                    <img src="Douche.jpg" alt="Description du projet 4">
-                </a>
-                <p>Installation complète de douche avec robinetterie encastrée.</p>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-
+        <!-- About Section -->
         <section id="about" class="about">
             <div class="container">
                 <h2>Qui sommes-nous ?</h2>
                 <div class="about-content">
-                    <img src="UrsulVasili.png" alt="Photo de l'équipe ou de l'artisan" class="about-img">
-                    <p>Spécialistes de la rénovation intégrale d’appartements parisiens, nous prenons en charge chaque étape du projet, du gros œuvre à la décoration. Haussmannien                         ou contemporain, chaque bien est rénové avec rigueur par une équipe tous corps d’état. Notre savoir-faire et nos assurances (décennale et responsabilité                            civile) garantissent des travaux en toute sérénité. 
-                    <br>Vous hésitez encore ? Offrez à vos questions des 
-                        <a href="Présentation.pdf" class="lien">réponses.</a>
-                        <style>
-                            .lien {color: blue;text-decoration: none;font-weight: normal;transition: color 0.3s;}
-                            .lien:hover {color: #6c757d;  text-decoration: none !important;}
-                        </style>
-                    </P>
+                    <!-- Logo à gauche -->
+                    <div class="about-logo">
+                        <img src="UrsulVasili.png" alt="Logo Ursul Vasili" class="about-img">
+                    </div>
+                    
+                    <!-- Ligne verticale séparatrice -->
+                    <div class="about-divider"></div>
+                    
+                    <!-- Texte à droite -->
+                    <div class="about-text">
+                        <p>
+                            Spécialistes de la rénovation intégrale d'appartements parisiens, nous prenons en charge chaque étape du projet, du gros œuvre à la décoration. Haussmannien ou contemporain, chaque bien est rénové avec rigueur par une équipe tous corps d'état. Notre savoir-faire et nos assurances (décennale et responsabilité civile) garantissent des travaux en toute sérénité.
+                        </p>
+                        <p>
+                            Vous hésitez encore ? Offrez à vos questions des 
+                            <a href="Présentation.pdf" class="pdf-link">réponses.</a>
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="why-us" class="why-us">
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
             <div class="container">
-                <h2>Pourquoi nous choisir ?</h2>
-                <ul>
-                    <li>Devis gratuit et détaillé : Transparence totale sur les prix.</li>
-                    <li>Respect des délais : Votre projet livré à temps.</li>
-                    <li>Travail soigné et de qualité : Des finitions impeccables pour un résultat durable.</li>
-                    <li>Conseils personnalisés : Un accompagnement sur mesure à chaque étape.</li>
-                    <li>Assurance décennale : Votre tranquillité d'esprit assurée.</li>
-                </ul>
+                <h2>Contactez-nous</h2>
+                <p>N'hésitez pas à nous contacter pour discuter de votre projet et obtenir un devis gratuit.</p>
+                <p><strong>Téléphone :</strong> <a href="tel:+33652429702">06 52 42 97 02</a></p>
+                <p><strong>Email :</strong> <a href="mailto:ursul.v50@gmail.com">ursul.v50@gmail.com</a></p>
+                <p>Nous intervenons sur Paris et en Ile-de-France</p>
+                <a href="https://calendar.app.google/m2t3TjwTszhh6Y457" class="btn">Commencer un projet</a>
+
+                <!-- Map -->
+                <div id="osm-map"></div>
             </div>
         </section>
-
-        <section id="contact" class="contact">
-        <div class="container">
-            <h2>Contactez-nous</h2>
-            <p>N'hésitez pas à nous contacter pour discuter de votre projet et obtenir un devis gratuit.</p>
-            <p><strong>Téléphone :</strong> <a href="tel:+33652429702">06 52 42 97 02</a></p>
-            <p><strong>Email :</strong> <a href="mailto:ursul.v50@gmail.com">ursul.v50@gmail.com</a></p>
-            <p>Nous intervenons sur Paris et en Ile-de-France </p>
-            <a href="" class="btn">Commencer un projet</a>
-
-            <div id="osm-map"></div>
-
-            <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-            <script>
-            const map = L.map('osm-map').setView([48.8679, 2.3629], 15); // Coordonnées et zoom
-
-            // NOUVELLE LIGNE POUR LES TUILES OPENSTREETMAP STANDARDS (SANS CLÉ API)
-            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                maxZoom: 19,
-                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            }).addTo(map);
-                
-
-            // Ajoutez un marqueur à la Place de la République
-            L.marker([48.8679, 2.3629]).addTo(map)
-                .bindPopup('Place de la République')
-                .openPopup();
-        </script>
-            <style>
-                /* Styles pour la carte */
-                #osm-map {
-                    height: 200px; /* Ancien: 400px - Ajustez cette valeur */
-                    width: 100%;
-                    margin-top: 30px;
-                    background-color: #333; /* Fond sombre par défaut */
-        }
-                </style>
-        </div>
-    </section>
     </main>
 
-   <footer>
-  <div class="container">
-    <p>&copy; 2025 URSUL VASILI RENOVATION. Tous droits réservés.</p>
-    <p>
-      <a href="mentions-legales.html">Mentions légales</a> |
-      <a href="politique-confidentialite.html">Politique de confidentialité</a>
-    </p>
-        <p><a href="https://agence-bour.com/" target="_blank">Site produit par Agence Bour</a></p>
-  </div>
-</footer>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 URSUL VASILI RENOVATION. Tous droits réservés.</p>
+            <p>
+                <a href="mentions-legales.html">Mentions légales</a> |
+                <a href="politique-confidentialite.html">Politique de confidentialité</a>
+            </p>
+            <p><a href="https://agence-bour.com/" target="_blank">Site produit par Agence Bour</a></p>
+        </div>
+    </footer>
 
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    
+    <!-- Slider Script -->
+    <script>
+        // Slider functionality
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.dot');
+        const totalSlides = slides.length;
 
+        function showSlide(index) {
+            // Gérer le bouclage
+            if (index >= totalSlides) {
+                currentSlide = 0;
+            } else if (index < 0) {
+                currentSlide = totalSlides - 1;
+            } else {
+                currentSlide = index;
+            }
+
+            // Retirer la classe active de tous les slides et dots
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+
+            // Ajouter la classe active au slide et dot actuel
+            slides[currentSlide].classList.add('active');
+            dots[currentSlide].classList.add('active');
+        }
+
+        // Navigation par flèches
+        document.querySelector('.slider-btn-prev').addEventListener('click', () => {
+            showSlide(currentSlide - 1);
+        });
+
+        document.querySelector('.slider-btn-next').addEventListener('click', () => {
+            showSlide(currentSlide + 1);
+        });
+
+        // Navigation par points
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                showSlide(index);
+            });
+        });
+
+        // Auto-play optionnel (décommenter pour activer)
+        // setInterval(() => {
+        //     showSlide(currentSlide + 1);
+        // }, 5000);
+    </script>
+    
+    <script>
+        // Initialize map
+        const map = L.map('osm-map').setView([48.8679, 2.3629], 15);
+        
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+        
+        L.marker([48.8679, 2.3629]).addTo(map)
+            .bindPopup('Place de la République')
+            .openPopup();
+    </script>
 </body>
 </html>
-
-
-
-
-
-
