@@ -568,6 +568,7 @@ footer {
     align-items: flex-start;
     gap: 40px;
     margin-bottom: 40px;
+    justify-content: center;
 }
 
 .footer-logo {
@@ -578,6 +579,8 @@ footer {
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
+    position: absolute;
+    left: 0;
 }
 
 .footer-logo img {
