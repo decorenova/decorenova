@@ -280,7 +280,7 @@ a:hover {
 
 .btn-cta:hover {
     background: linear-gradient(135deg, #f7931e 0%, #ff6b35 100%);
-    box-shadow: 0 15px 45px rgba(255, 107, 53, 0.5);
+    box-shadow: 0 10px 30px rgba(255, 107, 53, 0.3);
     transform: translateY(-3px) scale(1.05);
 }
 
