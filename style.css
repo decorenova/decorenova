@@ -295,7 +295,7 @@ a:hover {
 
 .slider-container {
     position: relative;
-    max-width: 900px;
+    width: 100%;
     margin: 0 auto;
     overflow: hidden;
     border-radius: 12px;
