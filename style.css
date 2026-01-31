@@ -579,6 +579,9 @@ footer {
     align-items: center;
     flex-shrink: 0;
     margin-right: 20px;
+    background: #fff;
+    padding: 12px 16px;
+    border-radius: 8px;
 }
 
 .footer-logo img {
