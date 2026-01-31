@@ -178,8 +178,7 @@ a:hover {
 
 .services-image img {
     width: 100%;
-    height: auto;
-    min-height: 150px;
+    height: 150px;
     object-fit: cover;
     display: block;
     transition: transform 0.3s ease;
@@ -608,7 +607,7 @@ footer a:hover {
     }
 
     .services-image img {
-        min-height: 300px;
+        height: 150px;
     }
 
     .gallery {
