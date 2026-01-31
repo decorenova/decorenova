@@ -118,6 +118,26 @@
             </form>
         </div>
     </section>
+
+    <script>
+        // Préremplir le formulaire à partir des paramètres URL
+        document.addEventListener('DOMContentLoaded', function() {
+            const params = new URLSearchParams(window.location.search);
+            const service = params.get('service');
+            const description = params.get('desc');
+
+            if (service) {
+                const typeSelect = document.getElementById('type-travaux');
+                typeSelect.value = service;
+            }
+
+            if (description) {
+                const descField = document.getElementById('description');
+                descField.value = decodeURIComponent(description);
+            }
+        });
+    </script>
+
     <script src="script.js"></script>
 </body>
 
