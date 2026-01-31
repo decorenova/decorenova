@@ -567,35 +567,29 @@ footer {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    gap: 60px;
+    gap: 40px;
     margin-bottom: 40px;
-    justify-content: center;
+    justify-content: flex-start;
     position: relative;
 }
 
 .footer-logo {
-    background: linear-gradient(135deg, #1f417e 0%, #2d5ba8 100%);
-    padding: 12px 20px;
-    border-radius: 15px 15px 0 0;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-left: -100px;
+    margin-right: 20px;
 }
 
 .footer-logo img {
-    height: 50px;
+    height: 60px;
     width: auto;
     opacity: 1;
     transition: opacity 0.3s ease;
 }
 
 .footer-logo img:hover {
-    opacity: 0.9;
+    opacity: 0.8;
 }
 
 .footer-center {
